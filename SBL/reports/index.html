@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Lato:400,700,700i');
+    body {
+        font-family: Lato;
+        max-width: 750px;
+        margin: auto;
+    }
+    /***** Background Color*****/
+    .main-header-footer {
+    background: #fafafa;
+}
+    .jumbotron {
+        background: #fafafa;
+        background-size: cover;
+        padding-top: 4em;
+        padding-bottom: 4em;
+        background-position: 100% 30%;
+        margin-bottom: 0px;
+    }
+    .jumbotron .h1,
+    .jumbotron h1 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .jumbotron .h1,
+    .jumbotron h1,
+    .jumbotron .h2,
+    .jumbotron h2 {
+        color: #333;
+    }
+    
+    .jumbotron .p,
+    .jumbotron p {
+        color: #666;
+        letter-spacing: 1px;
+        font-size: 1.2em
+    }
+    
+    .row h2 {
+        font-size: 1.5em;
+    }
+    
+    .row {
+        width: 100%;
+        margin: auto;
+    }
+    
+    .top-row {
+        max-width: 1140px;
+        padding: 50px;
+    }
+    #pro-content .col-md-12 {
+        padding: 2em 0px;
+    }
+    #pro-content .mid-section {
+        width: 86%;
+        margin: auto;
+        float: initial;
+        text-align: center;
+    }
+    
+    #pro-content .btm-section {
+        width: 100%;
+        margin: auto;
+    }
+    
+    #pro-content p {
+        font-size: 1.25em;
+    }
+    
+    #pro-content .intro {
+        text-align: center;
+    }
+    
+    .pro-list li {
+        font-size: 1.1em;
+    }
+    
+    .pro-center {
+        text-align: center;
+    }
+    
+    .pro-fixed-cont {
+        max-width: 100%;
+    }
+    
+    .row.pro-fixed-cont {
+        padding: 2.4em 0;
+    }
+    
+    .img-rounded {
+        margin: auto;
+    }
+    
+    .bg-01 {
+        background: #f5f5f5;
+    }
+    
+    .pad-top {
+        padding-top: 30px;
+    }
+    
+    .marg-01 {
+        margin: 2em auto;
+    }
+    
+    .mw-01 {
+        max-width: 95%;
+        margin: auto;
+    }
+    
+    #pro-content .col-pad-01 {
+        padding: .5em 0;
+    }
+    
+    #pro-content .pad-bot {
+        padding-bottom: 4em;
+    }
+    
+    .col-md-6.marg-left {
+        margin-left: -97px;
+    }
+    
+    #pro-content .marg-ipad {
+        padding: 0;
+    }
+     .marg-ipad img {
+        max-width: 100%;
+        position: relative;
+        left: -18%;
+    }
+    .btn-primary {
+        background-color: #22387f;
+        border-color: #22387f;
+    }
+    
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:focus {
+        background-color: #1c388d !important;
+        border-color: #1c388d !important;
+    }
+    
+    .btn-group-lg>.btn,
+    .btn-lg {
+        text-transform: uppercase;
+        padding: 12px 20px;
+    }
+    
+    .button-wrapper {
+        display: inline-block;
+        padding-right: 25px;
+    }
+    /****** LoginBox*********/
+    
+    .white-bg {
+        background: #ffffff;
+    }
+    
+    .panel-body, .panel-head {
+        padding: 30px;
+    }
+    .panel-head{
+        padding-bottom: 0px;
+    }
+    .panel-body{
+        padding-top: 0px;
+    }
+    .panel-body h4 {
+        font-size: 20px;
+    }
+    .panel h4 span,
+    .panel h5 span {
+        font-weight: bold;
+        font-style: italic;
+    }
+    
+    .panel h5 {
+        margin-bottom: 0px;
+    }
+    .panel-footer {
+        padding: 10px 30px 15px;
+    }
+    
+    .log-selection {
+        padding: 10px 0px;
+    }
+    
+    .log-selection input {
+        width: 100%;
+        height: 35px;
+        padding-left: 5px;
+    }
+    
+    .log-selection .btn-md {
+        text-transform: uppercase;
+    }
+    
+    a.lpw {
+        font-size: 14px;
+        float: right;
+    }
+    
+    .signup-link {
+        font-size: 14px;
+    }
+
+    .hide {
+        display: none;
+    }
+    
+    @media screen and (min-width: 480px) {
+        .row h2 {
+            font-size: 1.7em;
+        }
+        #pro-content .intro {
+            font-size: 1.5em;
+        }
+        .mw-01 {
+            max-width: 85%;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        p.pro-max {
+            max-width: 85%;
+        }
+        .pad-top {
+            padding-top: 0px;
+        }
+        .pro-left {
+            text-align: left;
+        }
+        .marg-ipad {
+            margin-right: initial;
+        }
+    }
+        @media screen and (min-width: 1700px) {
+            #pro-content .intro {
+            font-size: 28px;
+        }
+    }
+
+</style>
+
+<body id="pro">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 pad-top">
+                    <div class="panel panel-default">
+                        <div class="panel-head">
+                        <h1>The Alternate Lending Report</h1>
+                    <p>Sign in to download the latest research on financing trends, legal issues, new technology, and marketing strategy in the alternative lending sector.</p>
+                        </div>
+                        <div class="panel-body">
+                            <!---------Sign In Form Will Go Here------>
+                            <form id="rcp_login_form" name="rcp_login_form" class="rcp_form" method="POST" action="https://qa.smallbusinesslendingdaily.com/login/">
+                                <fieldset class="rcp_login_data">
+                                    <div class="log-selection">
+                                        <label for="rcp_user_login input-group-addon">Email</label>
+                                        <input name="rcp_user_login" id="rcp_user_login" class="required" required="" type="text">
+                                    </div>
+                                    <div class="log-selection">
+                                        <label for="rcp_user_pass input-group-addon">Password</label>
+                                        <input name="rcp_user_pass" id="rcp_user_pass" class="required" required="" type="password">
+                                    </div>
+                                    <div class="">
+                                        <input type="checkbox" name="rcp_user_remember" id="rcp_user_remember" value="1">
+                                        <label for="rcp_user_remember">Remember me</label>
+                                        <a class="lpw" href="/login/?rcp_action=lostpassword">Lost your password?</a>
+                                    </div>
+                                    <div class="log-selection">
+                                        <input type="hidden" name="rcp_action" value="login">
+                                        <input type="hidden" name="rcp_redirect" value="https://qa.smallbusinesslendingdaily.com/">
+                                        <input type="hidden" name="rcp_login_nonce" value="639079d88b">
+                                        <input class="btn btn-md btn-primary" id="rcp_login_submit" type="submit" value="Login">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                            <h5>Not a <span>Pro</span> Member?</h5>
+                            <a class="signup-link" href="#">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pro-content">
+        <div class="container-fluid bg-01 hide">
+            <!-- Example row of columns -->
+            <div class="row top-row">
+                <div class="col-md-12">
+                    <p class="intro">You already know that there’s very little transparency in the small business lending market. Without government-mandated loan reporting or public aggregation of data, there’s simply not enough information for professionals like yourself to make good business decisions. We’re solving this problem.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid marg-01 pro-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-12 marg-ipad">
+                        <img class="img-rounded img-responsive" src="/images/alr-ss01-ipad-v2.png" />
+                    </div>
+                    <div class="col-md-12 pro-center">
+                        <h2>The Alternative Lending Report</h2>
+                        <div class="mw-01">
+                            <p>The Alternative Lending Report covers the small business lending ecosystem including alterative investment structures, online and marketplace lending, and non-bank financing such as factoring, invoice financing, merchant cash advance, and revenue-based financing. </p>
+                            <p>The report is published on the first and third Thursday of each month, and includes access to special features and functions on the SmallBusinessLending.io website.  If you would like to receive our research reports, become a <a href="/pro">Small Business Lending Pro</a> today.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-01">
+            <div class="row pro-fixed-cont">
+                <div class="col-md-12 pro-center">
+                    <div class="col-md-12 mid-section mw-01">
+                        <h2>Our Editorial Agenda = No Bias.</h2>
+                        <p>As a data-driven company, our editorial agenda is to take no position, either pro or con, for or against, particular deals or deal-makers. Nothing in our research, electronic newsletters, or any of our products should be construed as investment advice. Have questions? Email us: team@smallbusinesslending.io.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+        <div class="container-fluid">
+            <div class="row pro-fixed-cont">
+                <div class="col-md-12 pro-center">
+                    <h2 class="intro">Questions?</h2>
+                    <p class="btm-section">If you’d like more information on becoming a Pro client, call us at (516) 876-8006 or <a href="#">sign up</a>.</p>
+                    <a href="#">Learn More ></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron v2" style="display:none">
+            <div class="container">
+                <h2>You can be a Small Business Lending <em>Pro</em> for only $995/year</h2>
+                <p>(Note: This is special launch pricing which will increase.)</p>
+                <p style=""><a class="btn btn-primary btn-lg" href="#" role="button">Sign up »</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+</body>
+
+</html>
